@@ -19,10 +19,13 @@
 
 	<style>
         * {
-            background-color: #eaeaea;
             background-repeat: no-repeat;
             background-position: center;
         }
+        body {
+            background-color: #eaeaea;
+        }
+        div { background-color: unset; }
         h1, h2 {
             font-family: "Nimbus Sans Cond Reg", sans-serif;
         },
@@ -33,17 +36,13 @@
             margin-bottom: 10px;
         }
         header {
-            background-image: url('http://via.placeholder.com/480x480');
+            background-image: url('assets/images/big-ears-festival-2016-header.jpg');
             padding: 4rem 1rem 2rem;
         }
         header, .ticket-section {
             height: 50vh;
         }
-        header, footer {
-
-        }
         img, .slider-buttons { background-color: unset }
-        footer { background-image: url("assets/images/big-ears-splash-footer.jpg"); }
         main {
             max-width: 960px;
         }
@@ -94,18 +93,11 @@
 
             <section class="festival-news">
                 <h2>Festival News</h2>
-                <div>
-                    <h3 class="rss-heading">Big Ears 2016 Artists Announced</h3>
-                    <p class="rss-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda, cupiditate delectus deleniti eaque enim, et eveniet fuga harum illum itaque natus nostrum pariatur perferendis quaerat repudiandae sapiente voluptates.</p>
-                </div>
-                <div>
-                    <h3 class="rss-heading">Big Ears 2016 Artists Announced</h3>
-                    <p class="rss-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda, cupiditate delectus deleniti eaque enim, et eveniet fuga harum illum itaque natus nostrum pariatur perferendis quaerat repudiandae sapiente voluptates.</p>
-                </div>
-                <div>
-                    <h3 class="rss-heading">Big Ears 2016 Artists Announced</h3>
-                    <p class="rss-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda, cupiditate delectus deleniti eaque enim, et eveniet fuga harum illum itaque natus nostrum pariatur perferendis quaerat repudiandae sapiente voluptates.</p>
-                </div>
+                [[!getFeed?
+                    &url=`http://bigearsfestival.com/feed/`
+                    &tpl=`rssTpl`
+                    &limit=`3`
+                ]]
             </section>
             <section class="video">
                 <iframe src="http://www.youtube.com/embed/W7qWa52k-nE"
@@ -117,8 +109,16 @@
             <h2>Stay Connected</h2>
 
             <div>
-                <input type="email" placeholder="Email Address">
-                <submit>Sign Up</submit>
+                <form action="" method="post" class="subscribe">
+                    <div class="row">
+                        <div class="input-group">
+                            <input class="input-group-field" type="email" placeholder="Email Address" value="[[!+fi.email]]">
+                            <div class="input-group-button">
+                                <input type="submit" class="button postfix" value="Sign Up" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
             <div class="social-media-links">
 

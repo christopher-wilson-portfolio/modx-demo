@@ -7,6 +7,9 @@
         --color-text-grey: #686b72;
         --color-green: #7f873f;
         --color-dark-green: #4c5438;
+
+        --body-font: "Proxima Nova Bold", sans-serif;
+        --heading-color: #000;
     }
 
     a {
@@ -19,7 +22,7 @@
     }
 
     body, h3 {
-        font-family: "Proxima Nova Bold", sans-serif;
+        font-family: var(--body-font);
         font-size: 16px;
         line-height: 20px;
     }
@@ -44,12 +47,20 @@
         line-height: 20px;
     }
 
+    footer {
+        background-image: url("/assets/images/big-ears-splash-footer.jpg");
+        padding: 2rem 3rem !important;
+        text-align: center;
+    }
+
     h1, h2 {
-        color: #000;
         font-family: "Nimbus Sans Cond Reg", sans-serif;
         font-size: 32px;
         line-height: 37px;
         margin-bottom: 10px;
+    }
+    h1, h2, h3 {
+        color: var(--heading-color);
     }
     h1 {
         font-size: 32px;
@@ -60,7 +71,6 @@
         line-height: 27px;
     }
     h3 {
-        color: #000;
         margin-bottom: 6px;
         margin-top: 6px;
     }
@@ -68,6 +78,21 @@
         max-width: 100%;
     }
 
+    input[type='email'] {
+        background-color: var(--color-grey2);
+        border-color: white;
+    }
+    input[type='email']::placeholder {
+        color: var(--color-text-grey) !important;
+        margin-left: 1rem;
+    }
+    input[type="submit"] {
+        background-color: var(--color-green);
+        margin: 0 !important;
+    }
+    input[type="submit"]:hover {
+        background-color: var(--color-dark-green);
+    }
     .festival-news div {
         border-bottom: 1px solid var(--color-grey3);
         margin-bottom: 1rem;
