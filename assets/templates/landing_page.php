@@ -80,9 +80,8 @@
             <img src="assets/images/sample-quote1.png"
                  alt="">
             <div class="slider-buttons">
-                <img src="assets/images/slider-arcell-left.png" class="btn-slider-left" alt="">
-                <img src="assets/images/slider-arcell-right.png" class="btn-slider-right" alt="">
-
+                <a href="#" class="btn-slider-left" alt="">
+                <a href="#" class="btn-slider-right" alt="">
             </div>
         </header>
         <main class="cell">
@@ -100,8 +99,9 @@
                 ]]
             </section>
             <section class="video">
-                <iframe src="http://www.youtube.com/embed/W7qWa52k-nE"
-                        width="560" height="315" frameborder="0" allowfullscreen></iframe>
+                <div class="responsive-embed">
+                    <iframe src="http://www.youtube.com/embed/W7qWa52k-nE" gooframeborder="0" allowfullscreen></iframe>
+                </div>
             </section>
         </main>
 
@@ -121,7 +121,9 @@
                 </form>
             </div>
             <div class="social-media-links">
-
+                <a href="[[*FacebookURL]]" class="link-facebook"></a>
+                <a href="[[*TwitterURL]]" class="link-twitter"></a>
+                <a href="[[*InstagramURL]]" class="link-instagram"></a>
             </div>
         </footer>
     </div>

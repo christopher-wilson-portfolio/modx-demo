@@ -1,4 +1,4 @@
-@media screen {
+media screen {
     :root {
         --color-grey1: #f2f2f2;
         --color-grey2: #eaeaea;
@@ -93,6 +93,18 @@
     input[type="submit"]:hover {
         background-color: var(--color-dark-green);
     }
+    .btn-slider-left {
+        background-image: url('/assets/images/slider-arrow-left.png');
+    }
+    .btn-slider-left:hover {
+        background-image: url('/assets/images/slider-arrow-left-hover.png');
+    }
+    .btn-slider-right {
+        background-image: url('/assets/images/slider-arrow-right.png');
+    }
+    .btn-slider-right {
+        background-image: url('/assets/images/slider-arrow-right-hover.png');
+    }
     .festival-news div {
         border-bottom: 1px solid var(--color-grey3);
         margin-bottom: 1rem;
@@ -100,9 +112,38 @@
     .festival-news h2 {
         margin-bottom: 2rem;
     }
+    .link-facebook {
+        background-image: url('/assets/images/big-ears-facebook@2x.png')
+    }
+    .link-facebook:hover {
+        background-image: url('/assets/images/big-ears-facebook-hover@2x.png')
+    }
+    .link-instagram {
+        background-image: url('/assets/images/big-ears-instagram@2x.png')
+    }
+    .link-instagram:hover {
+        background-image: url('/assets/images/big-ears-instagram-hover@2x.png')
+    }
+    .link-twitter {
+        background-image: url('/assets/images/big-ears-twitter@2x.png')
+    }
+    .link-twitter:hover {
+        background-image: url('/assets/images/big-ears-twitter-hover@2x.png')
+    }
     .rss-heading {
         color: var(--color-green);
         font-weight: bold;
+    }
+    .social-media-links {
+        display: flex;
+        justify-content: center;
+    }
+    .social-media-links a, .slider-buttons a {
+        background-size: cover;
+        display: inherit;
+        float: left;
+        height: 2rem;
+        width: 2rem;
     }
     .video {
         margin-bottom: 2rem;
