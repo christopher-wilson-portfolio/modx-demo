@@ -7,9 +7,10 @@
             [[!+fi.validation_error_message:notempty=`<p>[[!+fi.validation_error_message]]</p>`]]
             <div class="medium-7">
                 [[!FormIt?
-                    &hooks=`email,redirect`
+                    &hooks=`FormSave,email,redirect`
                     &emailTo=`cwilson@christopherwilson.biz`
                     &redirectTo=``
+                    &fsFormTopic=`contact`
                     &validate=`nospam:blank,
                     email:email:required,
                 ]]
