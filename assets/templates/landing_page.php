@@ -16,10 +16,12 @@
         </header>
         <main class="cell">
             <div class="grid-x ticket-section-container">
+                <div class="bird-left"></div>
                 <section class="small-12 medium-10 medium-offset-1 ticket-section grid-x grid-margin-x">
                     <a href="#" class="ticket-btn tickets-preorder"></a>
                     <a href="#" class="ticket-btn tickets-last-year"></a>
                 </section>
+                <div class="bird-right"></div>
             </div>
 
             <div class="grid-x grid-margin-x">
@@ -38,6 +40,5 @@
                 </section>
             </div>
         </main>
-
 
         [[$Footer]]

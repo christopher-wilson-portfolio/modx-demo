@@ -89,6 +89,11 @@
                     height: 40vh;
                     padding: 35px 45px;
                 }
+
+                header > div {
+                    margin: 0 auto;
+                    width: 960px;
+                }
                 iframe {
                     -webkit-box-shadow: 0px -12px 20px 0px rgba(000, 000, 000, 0.25);
                     -moz-box-shadow: 0px -12px 20px 0px rgba(000, 000, 000, 0.25);
@@ -96,6 +101,22 @@
                 }
                 main {
                     margin-top: -6rem;
+                }
+                .bird-left {
+                    background-image: url('/assets/images/big-ears-bird-left.png');
+                    left: 160px;
+                }
+                .bird-left, .bird-right {
+                    background-size: cover;
+                    -webkit-background-size: cover;
+                    height: 160px;
+                    position: absolute;
+                    width: 170px;
+
+                }
+                .bird-right {
+                    background-image: url('/assets/images/big-ears-bird-right.png');
+                    right: 160px;
                 }
                 .btn-slider-left { margin-right: 5px }
                 .slider {
@@ -107,10 +128,16 @@
                     margin-right: unset;
                 }
                 .ticket-btn {
-                    width: 50% !important;
+                    width: 38% !important;
                 }
                 .ticket-btn, .ticket-section {
                     height: 17vh;
+                }
+                .tickets-last-year {
+                    margin-left: 4% !important;
+                }
+                .tickets-preorder {
+                    margin-left: 10% !important;
                 }
                 .ticket-section {
                     background: linear-gradient(to bottom, white, var(--color-grey1), transparent);
