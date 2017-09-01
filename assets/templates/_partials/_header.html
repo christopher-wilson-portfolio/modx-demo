@@ -86,7 +86,7 @@
             @media (min-width: 960px) {
                 footer h2 { float: left; max-width: 960px; margin: 0 auto; }
                 header {
-                    height: 40vh;
+                    height: 350px;
                     padding: 35px 45px;
                 }
 
@@ -104,7 +104,9 @@
                 }
                 .bird-left {
                     background-image: url('/assets/images/big-ears-bird-left.png');
-                    left: 160px;
+                    margin-right: 800px;
+                    top: 250px;
+                    width: 150px;
                 }
                 .bird-left, .bird-right {
                     background-size: cover;
@@ -116,9 +118,16 @@
                 }
                 .bird-right {
                     background-image: url('/assets/images/big-ears-bird-right.png');
-                    right: 160px;
+                    margin-left: 800px;
                 }
                 .btn-slider-left { margin-right: 5px }
+                .btn-slider-right, .btn-slider-left {
+                    height:25px;
+                }
+                .center {
+                    width: 960px !important;
+                    margin: 0 auto;
+                }
                 .slider {
                     background-color: unset;
                     border-left: 1px solid white;
@@ -131,7 +140,7 @@
                     width: 38% !important;
                 }
                 .ticket-btn, .ticket-section {
-                    height: 17vh;
+                    height: 150px;
                 }
                 .tickets-last-year {
                     margin-left: 4% !important;
@@ -142,8 +151,9 @@
                 .ticket-section {
                     background: linear-gradient(to bottom, white, var(--color-grey1), transparent);
                     box-shadow: 0 -12px 10px var(--color-text-grey);
-                    height: 20vh;
+                    height: 173px;
                     margin-bottom: 4rem;
+                    padding-top: 15px;
                 }
                 .ticket-section-container { overflow: hidden}
             }
@@ -154,3 +164,20 @@
 </head>
 
 <body>
+    <noscript id="deferred-styles">
+
+    </noscript>
+
+    <script type="text/javascript">
+        var loadDeferredStyles = function() {
+            var addStylesNode = document.getElementById("deferred-styles");
+            var replacement = document.createElement("div");
+            replacement.innerHTML = addStylesNode.textContent;
+            document.body.appendChild(replacement)
+            addStylesNode.parentElement.removeChild(addStylesNode);
+        };
+        var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+            webkitRequestAnimationFrame || msRequestAnimationFrame;
+        if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+        else window.addEventListener('load', loadDeferredStyles);
+    </script>

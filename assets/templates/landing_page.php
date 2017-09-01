@@ -1,7 +1,7 @@
 [[$Header]]
 	<div class="grid-x grid-padding-x">
         <header class="grid-x cell">
-            <div class="cell small-10 small-offset-1">
+            <div class="center cell small-10 small-offset-1">
                 <img src="assets/images/big-ears-2016-logo.png"
                      alt="">
                 <div class="slider">
