@@ -12,60 +12,101 @@
 	      content="ie=edge">
 	<title>[[*pagetitle]]</title>
 
-	<link rel="stylesheet"
-	      href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css"
-	      integrity="sha256-GSio8qamaXapM8Fq9JYdGNTvk/dgs+cMLgPeevOYEx0="
-	      crossorigin="anonymous" />
+	<link rel="stylesheet" href="/assets/stylesheets/foundation.min.css" />
 
 	<style>
-        * {
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        body {
-            background-color: #eaeaea;
-        }
-        div { background-color: unset; }
-        h1, h2 {
-            font-family: "Nimbus Sans Cond Reg", sans-serif;
-        },
-        h2 {
-            font-size: 24px;
-            line-height: 27px;
-            color: #000;
-            margin-bottom: 10px;
-        }
-        header {
-            background-image: url('assets/images/big-ears-festival-2016-header.jpg');
-            padding: 4rem 1rem 2rem;
-        }
-        header, .ticket-section {
-            height: 50vh;
-        }
-        img, .slider-buttons { background-color: unset }
-        main {
-            max-width: 960px;
-        }
-        .tickets-preorder {
-            background-image: url("assets/images/buy-2016-pre-sale-tickets.png")
-        }
-        .tickets-preorder:hover {
-            background-image: url("assets/images/buy-2016-pre-sale-tickets-hover.png")
-        }
-        .tickets-last-year {
-            background-image: url("assets/images/see-last-years-event.png");
-        }
-        .tickets-last-year:hover {
-            background-image: url("assets/images/see-last-years-event-hover.png");
-        }
-        .ticket-btn {
-            display: inline-block;
-            height: 25vh;
-            width: 100%;
-        }
-        .ticket-section {
-            width: 100%;
-            height: 50vh;
+        @media screen {
+            :root {
+                --color-grey1: #f2f2f2;
+                --color-grey2: #eaeaea;
+                --color-grey3: #d3d3d3;
+                --color-grey4: #bfbfbf;
+                --color-text-grey: #686b72;
+                --color-green: #7f873f;
+                --color-dark-green: #4c5438;
+
+                --body-font: "Proxima Nova Bold", sans-serif;
+                --heading-color: #000;
+            }
+
+
+            * {
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            body {
+                background-color: #eaeaea;
+                margin: 0 auto;
+            }
+            div { background-color: unset; }
+            h1, h2 {
+                font-family: "Nimbus Sans Cond Reg", sans-serif;
+            },
+            h2 {
+                font-size: 24px;
+                line-height: 27px;
+                color: #000;
+                margin-bottom: 10px;
+            }
+            header {
+                background-image: url('assets/images/big-ears-festival-2016-header.jpg');
+                background-size: cover;
+                padding: 4rem 1rem 2rem;
+            }
+            header, .ticket-section {
+                height: 50vh;
+            }
+            img, .slider-buttons { background-color: unset }
+            main {
+                max-width: 960px;
+                margin: 0 auto;
+            }
+            .slider {
+                background-color: unset;
+            }
+            .tickets-preorder {
+                background-image: url("assets/images/buy-2016-pre-sale-tickets.png")
+            }
+            .tickets-preorder:hover {
+                background-image: url("assets/images/buy-2016-pre-sale-tickets-hover.png")
+            }
+            .tickets-last-year {
+                background-image: url("assets/images/see-last-years-event.png");
+            }
+            .tickets-last-year:hover {
+                background-image: url("assets/images/see-last-years-event-hover.png");
+            }
+            .ticket-btn {
+                display: inline-block;
+                height: 25vh;
+                width: 100%;
+            }
+            .ticket-section { width: 100%; height: 50vh; }
+
+            @media (min-width: 960px) {
+                header {
+                    height: 30vh;
+                    padding: 35px 45px;
+                }
+                .slider {
+                    background-color: unset;
+                    border-left: 1px solid white;
+
+                    float: right;
+                    height: 85%;
+                    padding-left: 1rem;
+                    margin-right: unset;
+                }
+                .ticket-btn {
+                    width: 50% !important;
+                }
+                .ticket-section {
+                    background: linear-gradient(to bottom, white, transparent);
+                    box-shadow: 0 -10px 10px var(--color-text-grey);
+                    height: 20vh;
+                    margin-bottom: 4rem;
+                }
+            }
         }
 	</style>
 
@@ -74,35 +115,43 @@
 
 <body>
 	<div class="grid-x grid-padding-x">
-        <header class="cell">
-            <img src="assets/images/big-ears-2016-logo.png"
-                 alt="">
-            <img src="assets/images/sample-quote1.png"
-                 alt="">
-            <div class="slider-buttons">
-                <a href="#" class="btn-slider-left" alt="">
-                <a href="#" class="btn-slider-right" alt="">
+        <header class="grid-x cell">
+            <div class="cell small-10 small-offset-1">
+                <img src="assets/images/big-ears-2016-logo.png"
+                     alt="">
+                <div class="slider">
+                    <img src="assets/images/sample-quote1.png"
+                         alt="">
+                    <div class="slider-buttons">
+                        <a href="#" class="btn-slider-left">
+                        <a href="#" class="btn-slider-right">
+                    </div>
+                </div>
             </div>
         </header>
         <main class="cell">
-            <section class="ticket-section">
-                <a href="#" class="ticket-btn tickets-preorder"></a>
-                <a href="#" class="ticket-btn tickets-last-year"></a>
-            </section>
+            <div class="grid-x">
+                <section class="small-12 medium-8 medium-offset-2 ticket-section grid-x grid-margin-x">
+                    <a href="#" class="medium-5 ticket-btn tickets-preorder"></a>
+                    <a href="#" class="medium-5 ticket-btn tickets-last-year"></a>
+                </section>
+            </div>
 
-            <section class="festival-news">
-                <h2>Festival News</h2>
-                [[!getFeed?
+            <div class="grid-x grid-margin-x">
+                <section class="medium-4 cell festival-news">
+                    <h2>Festival News</h2>
+                    [[!getFeed?
                     &url=`http://bigearsfestival.com/feed/`
                     &tpl=`rssTpl`
                     &limit=`3`
-                ]]
-            </section>
-            <section class="video">
-                <div class="responsive-embed">
-                    <iframe src="http://www.youtube.com/embed/W7qWa52k-nE" gooframeborder="0" allowfullscreen></iframe>
-                </div>
-            </section>
+                    ]]
+                </section>
+                <section class="medium-8 cell video">
+                    <div class="responsive-embed">
+                        <iframe src="http://www.youtube.com/embed/W7qWa52k-nE" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </section>
+            </div>
         </main>
 
         <footer class="footer cell">
