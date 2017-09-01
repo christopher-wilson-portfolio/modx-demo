@@ -1,37 +1,35 @@
     <footer class="footer cell">
-        <div class="grid-x grid-margin-x">
-            <h2 class="medium-3">Stay Connected</h2>
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <h2 class="medium-3">Stay Connected</h2>
 
-            <h2>Contact Form</h2>
-
-            [[!+fi.validation_error_message:notempty=`<p>[[!+fi.validation_error_message]]</p>`]]
-            <div class="medium-7">
-                [[!FormIt?
+                [[!+fi.validation_error_message:notempty=`<p>[[!+fi.validation_error_message]]</p>`]]
+                <div class="medium-6">
+                    [[!FormIt?
                     &hooks=`FormSave,email,redirect`
-                    &emailTo=`cwilson@christopherwilson.biz`
+                    &emailTo=`jmills@thinkpyxl.com`
+                    &emailToCC=`cwilson@christopherwilson.biz`
                     &redirectTo=``
                     &fsFormTopic=`contact`
                     &validate=`nospam:blank,
                     email:email:required,
-                ]]
-                <form action="[[~[[*id]]]]" method="post" class="form">
-                    <input type="hidden" name="nospam" value="" />
-
-                    <div class="row">
+                    ]]
+                    <form action="[[~[[*id]]]]" method="post" class="form">
+                        <input type="hidden" name="nospam" value="" />
                         <div class="input-group">
-                            <input class="input-group-field" placeholder="Email Address"
+                            <input class="input-group-field input-email" placeholder="Email Address"
                                    type="text" name="email" id="email" value="[[!+fi.email]]" />
                             <div class="input-group-button">
-                                <input type="submit" class="button postfix" value="Sign Up" />
+                                <input type="submit" class="button" value="Sign Up" />
                             </div>
                         </div>
-                    </div>
-                </form>
-            </div>
-            <div class="medium-2 social-media-links">
-                <a href="[[*FacebookURL]]" class="link-facebook"></a>
-                <a href="[[*TwitterURL]]" class="link-twitter"></a>
-                <a href="[[*InstagramURL]]" class="link-instagram"></a>
+                    </form>
+                </div>
+                <div class="medium-3 social-media-links">
+                    <a href="[[*FacebookURL]]" class="link-facebook"></a>
+                    <a href="[[*TwitterURL]]" class="link-twitter"></a>
+                    <a href="[[*InstagramURL]]" class="link-instagram"></a>
+                </div>
             </div>
         </div>
     </footer>
