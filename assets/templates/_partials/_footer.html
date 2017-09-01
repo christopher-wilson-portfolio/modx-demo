@@ -1,11 +1,25 @@
     <footer class="footer cell">
         <div class="grid-x grid-margin-x">
             <h2 class="medium-3">Stay Connected</h2>
+
+            <h2>Contact Form</h2>
+
+            [[!+fi.validation_error_message:notempty=`<p>[[!+fi.validation_error_message]]</p>`]]
             <div class="medium-7">
-                <form action="" method="post" class="subscribe">
+                [[!FormIt?
+                    &hooks=`email,redirect`
+                    &emailTo=`cwilson@christopherwilson.biz`
+                    &redirectTo=``
+                    &validate=`nospam:blank,
+                    email:email:required,
+                ]]
+                <form action="[[~[[*id]]]]" method="post" class="form">
+                    <input type="hidden" name="nospam" value="" />
+
                     <div class="row">
                         <div class="input-group">
-                            <input class="input-group-field" type="email" placeholder="Email Address" value="[[!+fi.email]]">
+                            <input class="input-group-field" placeholder="Email Address"
+                                   type="text" name="email" id="email" value="[[!+fi.email]]" />
                             <div class="input-group-button">
                                 <input type="submit" class="button postfix" value="Sign Up" />
                             </div>
