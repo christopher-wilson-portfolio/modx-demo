@@ -1,0 +1,129 @@
+<?php /** @var MODX $modx */ ?>
+[[!include? &file=`assets/templates/_partials/_header.php`]]
+<!doctype html>
+<html lang="en">
+<head>
+    <base href="[[++site_url]]" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="ie=edge">
+    <title>[[*pagetitle]]</title>
+
+    <link rel="stylesheet" href="/assets/stylesheets/foundation.min.css" />
+
+    <style>
+        @media screen {
+            :root {
+                --color-grey1: #f2f2f2;
+                --color-grey2: #eaeaea;
+                --color-grey3: #d3d3d3;
+                --color-grey4: #bfbfbf;
+                --color-text-grey: #686b72;
+                --color-green: #7f873f;
+                --color-dark-green: #4c5438;
+
+                --body-font: "Proxima Nova Bold", sans-serif;
+                --heading-color: #000;
+            }
+
+
+            * {
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            body {
+                background-color: #eaeaea;
+                margin: 0 auto;
+            }
+            div { background-color: unset; }
+            h1, h2 {
+                font-family: "Nimbus Sans Cond Reg", sans-serif;
+            }
+            h2 {
+                font-size: 24px;
+                line-height: 27px;
+                color: #000;
+                margin-bottom: 10px;
+            }
+            header {
+                background-image: url('assets/images/big-ears-festival-2016-header.jpg');
+                background-size: cover;
+                padding: 4rem 1rem 2rem;
+            }
+            header, .ticket-section {
+                height: 50vh;
+            }
+            img, .slider-buttons { background-color: unset }
+            main {
+                max-width: 960px;
+                margin: 0 auto;
+            }
+            .slider {
+                background-color: unset;
+            }
+            .tickets-preorder {
+                background-image: url("assets/images/buy-2016-pre-sale-tickets.png")
+            }
+            .tickets-preorder:hover {
+                background-image: url("assets/images/buy-2016-pre-sale-tickets-hover.png")
+            }
+            .tickets-last-year {
+                background-image: url("assets/images/see-last-years-event.png");
+            }
+            .tickets-last-year:hover {
+                background-image: url("assets/images/see-last-years-event-hover.png");
+            }
+            .ticket-btn {
+                display: inline-block;
+                height: 25vh;
+                width: 100%;
+            }
+            .ticket-section { width: 100%; height: 50vh; }
+
+            @media (min-width: 960px) {
+                footer h2 { float: left; max-width: 960px; margin: 0 auto; }
+                header {
+                    height: 40vh;
+                    padding: 35px 45px;
+                }
+                iframe {
+                    -webkit-box-shadow: 0px -12px 20px 0px rgba(000, 000, 000, 0.25);
+                    -moz-box-shadow: 0px -12px 20px 0px rgba(000, 000, 000, 0.25);
+                    box-shadow: 0px -12px 20px 0px rgba(000, 000, 000, 0.25);
+                }
+                main {
+                    margin-top: -6rem;
+                }
+                .btn-slider-left { margin-right: 5px }
+                .slider {
+                    background-color: unset;
+                    border-left: 1px solid white;
+                    float: right;
+                    height: 60%;
+                    padding-left: 1rem;
+                    margin-right: unset;
+                }
+                .ticket-btn {
+                    width: 50% !important;
+                }
+                .ticket-btn, .ticket-section {
+                    height: 17vh;
+                }
+                .ticket-section {
+                    background: linear-gradient(to bottom, white, var(--color-grey1), transparent);
+                    box-shadow: 0 -12px 10px var(--color-text-grey);
+                    height: 20vh;
+                    margin-bottom: 4rem;
+                }
+                .ticket-section-container { overflow: hidden}
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="assets/stylesheets/landing-page.css">
+</head>
+
+<body>

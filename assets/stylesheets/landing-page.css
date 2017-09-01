@@ -52,7 +52,7 @@
         -webkit-background-size: cover;
         background-size: cover;
         margin-top: 2rem;
-        padding: 2rem 3rem !important;
+        padding: 25px 3rem !important;
         text-align: center;
     }
 
@@ -150,5 +150,12 @@
     }
     .video {
         margin-bottom: 2rem;
+    }
+
+    @media (min-width: 960px) {
+        footer div {
+            float: left; max-width: 960px; margin: 0 auto;
+            padding: 25px;
+        }
     }
 }
